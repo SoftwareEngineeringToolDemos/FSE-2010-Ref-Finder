@@ -10,9 +10,9 @@ You can find the paper in the following [link] (http://delivery.acm.org/10.1145/
 
 In this repository, for Ref-Finder you will find:
 
-:white_check_mark: Source code (not available)
+:white_check_mark: Source code (available)
 
-:white_check_mark: Executable tool (not available)
+:white_check_mark: Executable tool (available)
 
 This repository was constructed by [Eesha Mulky] (https://github.com/egmulky) under the supervision of [Emerson Murphy-Hill] (https://github.com/CaptainEmerson).
 
