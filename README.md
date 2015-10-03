@@ -1,4 +1,20 @@
 # Ref-Finder
+# FSE-2010-Ref-Finder
+Ref-Finder: A Refactoring Reconstruction Tool based on Logic Query Templates. 
+
+This repository contains information related to the tool Ref-Finder presented in Foundations of Software Engineering (FSE), 2010. The tool was originally presented in the paper "Ref-Finder: A Refactoring Reconstruction Tool based on Logic Query Templates" by Miryung Kim, Matthew Gee, Alex Loh and  Napol Rachatasumrit.
+
+This repository is not the original repository for this tool.
+
+You can find the paper in the following [link] (http://delivery.acm.org/10.1145/1890000/1882353/p371-kim.pdf?ip=152.7.224.3&id=1882353&acc=ACTIVE%20SERVICE&key=6ABC8B4C00F6EE47%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&CFID=549350276&CFTOKEN=55992643&__acm__=1443453118_99cab28be86ca026658000e658d41f40)
+
+In this repository, for Ref-Finder you will find:
+
+:x: Source code (not available)
+
+:x: Executable tool (not available)
+
+This repository was constructed by [Eesha Mulky] (https://github.com/egmulky) under the supervision of [Emerson Murphy-Hill] (https://github.com/CaptainEmerson).
 
 [Website for Ref-Finder Tool Demo](https://sites.google.com/site/reffindertool/)
 
