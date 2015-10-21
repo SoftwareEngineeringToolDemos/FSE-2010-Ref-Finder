@@ -2,18 +2,6 @@
 
 Ref-Finder: A Refactoring Reconstruction Tool based on Logic Query Templates. 
 
-This repository contains information related to the tool Ref-Finder presented in Foundations of Software Engineering (FSE), 2010. The tool was originally presented in the paper "Ref-Finder: A Refactoring Reconstruction Tool based on Logic Query Templates" by Miryung Kim, Matthew Gee, Alex Loh and  Napol Rachatasumrit.
-
-This repository is not the original repository for this tool.
-
-In this repository, for Ref-Finder you will find:
-
-:white_check_mark: Source code (available)
-
-:white_check_mark: Executable tool (available)
-
-This repository was constructed by [Eesha Mulky] (https://github.com/egmulky) under the supervision of [Emerson Murphy-Hill] (https://github.com/CaptainEmerson).
-
 [Website for Ref-Finder Tool Demo](https://sites.google.com/site/reffindertool/)
 
 RefFinder  identifies complex refactorings between two program versions using a template-based refactoring reconstruction approach---RefFinder expresses each refactoring type in terms of template logic rules and uses a logic programming engine to infer concrete refactoring instances. It currently supports sixty three refactoring types from Fowler's catalog, showing the most comprehensive coverage among existing techniques.
@@ -70,3 +58,17 @@ Reference:
 Ref-Finder is built on LSDiff and we have open-sourced [LSDiff](https://github.com/SEAL-UCLA/lsdiff) and [LS-EclipsePlugin](https://github.com/SEAL-UCLA/ls-eclipse.git)
 
 Software engineers often inspect program differences when reviewing others’ code changes, when writing check-in comments, or when determining why a program behaves differently from expected behavior. Program differencing tools that support these tasks are limited in their ability to group related code changes or to detect potential inconsistency in program changes. To overcome these limitations and to complement existing approaches, we built Logical Structural Diff (LSDiff) that infers systematic structural differences as logic rules, noting anomalies from systematic changes as exceptions to the logic rules. We conducted a focus group study with professional software engineers in a large E-commerce company and also compared LSDiff’s results with plain structural differences without rules and textual differences. Our evaluation suggests that LSDiff complements existing differencing tools by grouping code changes that form systematic change patterns regardless of their distribution throughout the code and that its ability to discover anomalies shows promise in detecting inconsistent changes.
+
+This repository contains information related to the tool Ref-Finder presented in Foundations of Software Engineering (FSE), 2010. The tool was originally presented in the paper "Ref-Finder: A Refactoring Reconstruction Tool based on Logic Query Templates" by Miryung Kim, Matthew Gee, Alex Loh and  Napol Rachatasumrit.
+
+This repository _is not_ the original repository for this tool.
+
+In this repository, for Ref-Finder you will find:
+
+:white_check_mark: [Source code](https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/tree/master/code) (available)
+
+:white_check_mark: [Executable tool](https://sites.google.com/site/reffindertool/) (available)
+
+The tool can be downloaded from  [The Official Project Page](https://sites.google.com/site/reffindertool/)
+
+This repository was constructed by [Eesha Mulky] (https://github.com/egmulky) under the supervision of [Emerson Murphy-Hill] (https://github.com/CaptainEmerson). Thanks to Dr. Miryung Kim for help in establishing this repository.
