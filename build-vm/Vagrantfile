@@ -14,6 +14,7 @@ vb.memory = "2048"
 vb.name = "Ref-Finder"
 end
 config.vm.provision "shell", inline: <<-SHELL
+# Java installation source : http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html
 # The java installer requires you to accept the Oracle license before the installation begins. This is only required once. If for some reason you need the installation to be #automated, you can run the following command to automatically accept the Oracle license:
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 sudo add-apt-repository ppa:webupd8team/java -y
