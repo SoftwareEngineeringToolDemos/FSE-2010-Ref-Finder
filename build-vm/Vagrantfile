@@ -1,1 +1,25 @@
 
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version 
+Vagrant.configure(2) do |config|
+config.vm.box = "box-cutter/ubuntu1404-desktop"
+config.vm.hostname = "Ref-Finder"
+config.vm.provider "virtualbox" do |vb|
+# Display the VirtualBox GUI when booting the machine
+vb.gui = true
+# Customize the amount of memory on the VM:
+vb.memory = "2048"
+vb.name = "Ref-Finder"
+end
+config.vm.provision "shell", inline: <<-SHELL
+# The java installer requires you to accept the Oracle license before the installation begins. This is only required once. If for some reason you need the installation to be #automated, you can run the following command to automatically accept the Oracle license:
+echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+sudo add-apt-repository ppa:webupd8team/java -y
+sudo apt-get update
+# The installer provides Oracle Java 8 (which includes Java JDK, JRE and the Java browser plugin)
+sudo apt-get install oracle-java8-installer
+# To automatically set up the Java 8 environment variables, you can install the following package:
+sudo apt-get install -y oracle-java8-set-default
+SHELL
+end
