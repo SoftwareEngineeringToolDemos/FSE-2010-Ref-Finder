@@ -10,7 +10,7 @@ This folder contains the files needed to build a virtual machine for Ref-Finder 
 
 ###Steps to spin up a Virtual Machine for the tool Ref-Finder :
 
-1.Download the [Vagrantfile] (https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/Vagrantfile). Save it in a folder where you want to install the VM.
+1. Download the [Vagrantfile] (https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/Vagrantfile). Save it in a folder where you want to install the VM.
 
 2. From the host, navigate to that folder (via bash on Linux Machine or Powershell or CommandPrompt on Windows Machine) and execute the command :  
       "vagrant up"
