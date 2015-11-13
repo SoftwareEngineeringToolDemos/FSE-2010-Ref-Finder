@@ -13,14 +13,14 @@ This folder contains the files needed to build a virtual machine for Ref-Finder 
 1. Download the [Vagrantfile] (https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/Vagrantfile). Save it in a folder where you want to install the VM.
 
 2. From the host, navigate to that folder (via bash on Linux Machine or Powershell or CommandPrompt on Windows Machine) and execute the command :  
-      "vagrant up"
+      ```vagrant up```
 
 3. Wait for the VM to be started.Now the script automatically executes the commands.The Virtual Machine will boot up and can be viewed from the Virtual Box. 
 
 #### Provisioning:
 
 1. Ubuntu Desktop 14.04.
-2. JDK 1.8 ( Can be checked using "java -version" in the terminal)
+2. JDK 1.8 ( Can be checked using ```java -version``` in the terminal)
 
 #### Username and Password
 
