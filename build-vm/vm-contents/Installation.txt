@@ -1,0 +1,26 @@
+Ref-Finder is an Eclipse plug-in. Ref-Finder Source code is available at Github(https://github.com/SEAL-UCLA/Ref-Finder)
+
+Download the plugin from :
+
+https://sites.google.com/site/reffindertool/
+
+1. Extract the file(we get LSclipse_1.0.4). Install the plugin in your eclipse distribution by dropping it in your Eclipse install's plugin folder.
+
+2.Add the Refactoring View by selecting "Window->Show View->Other", scrolling to LSDiff and selecting Refactoring.
+
+3.You must have both versions of the software product set up as projects in your workspace. If you do not, do so now - make sure you remember which is the old verion and which is the new one!
+
+4. Click the "Select Files" icon in the upper right corner of the newly added Refactoring View
+
+5. Select from the dropdowns the before and after project versions from your workspace and press ok!
+
+6. A progress dialog will appear (but may not share the most useful data). Comparison and refactoring inference should take less than ten minutes; then you will see the output.
+
+7. On the left you will see a list of found refactorings. Double click to pull up more information on the right.
+
+8.Double click an old or new code file to pull up the corresponding file.
+
+
+Virtual Machine details:
+Username: Vagrant
+Password: Vagrant
