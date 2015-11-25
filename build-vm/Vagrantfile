@@ -23,5 +23,35 @@ sudo apt-get update
 sudo apt-get install oracle-java8-installer
 # To automatically set up the Java 8 environment variables, you can install the following package:
 sudo apt-get install -y oracle-java8-set-default
+
+#Install eclipse Mars
+sudo apt-get update
+sudo wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_java8.sh && bash equip_java8.sh
+echo "Starting eclipse download"
+sudo wget -nv "http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-rcp-mars-1-linux-gtk-x86_64.tar.gz&r=1" -O eclipse-rcp-mars-1-linux-gtk-x86_64.tar.gz
+echo "Installing eclipse"
+cd /home/vagrant && sudo tar xzf /home/vagrant/eclipse-rcp-mars-1-linux-gtk-x86_64.tar.gz
+sudo ln -s /home/vagrant/eclipse/eclipse /home/vagrant/Desktop/eclipse
+
+
+#Download Ref-Finder
+wget -O "/home/vagrant/Desktop/LSclipse_1.0.4.jar" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/LSclipse_1.0.4.jar
+
+#Extract Ref-Finder jar file
+
+# Copy extracted file to the Eclipse Plugins folder
+sudo cp -a "/home/vagrant/Desktop/LSclipse_1.0.4.jar" /home/vagrant/eclipse/plugins/
+
+
+# Copy Installation file, License file, Readme, Youtube video link file and Acknowledgements file to desktop of the virtual machine
+wget -O "/home/vagrant/Desktop/Readme.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/Readme.txt
+wget -O "/home/vagrant/Desktop/Installation.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/Installation.txt
+wget -O "/home/vagrant/Desktop/License.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/License.txt
+wget -O "/home/vagrant/Desktop/Acknowledgement.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/Acknowledgement.txt
+wget -O "/home/vagrant/Desktop/How to use on this tool.desktop" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/Youtube%20Video.desktop
+sudo chown -R vagrant "/home/vagrant/Desktop"
+sudo chmod -R a+rwx "/home/vagrant/Desktop"
 SHELL
 end
+
+#cp LSclipse_1.0.4.jar /c/Users/user/Desktop/FSE-2010-Ref-Finder/build-vm/vm-contents/LSclipse_1.0.4.jar
