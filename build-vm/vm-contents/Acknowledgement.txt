@@ -1,2 +1,5 @@
 
 1. Vagrant box used: boxcutter/ubuntu1504-desktop (https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1504-desktop)
+2.Commands for java installation (http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
+3.Commands for eclipse installation (http://blog.versioneye.com/2015/05/05/setting-up-a-dev-environment-with-vagrant/)
+4.Commands for Vagrantfile (https://help.ubuntu.com/)
