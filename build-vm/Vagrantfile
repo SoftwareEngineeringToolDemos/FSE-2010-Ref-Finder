@@ -4,21 +4,21 @@ Vagrant.configure(2) do |config|
 # Every Vagrant development environment requires a box. You can search for
 # boxes at https://atlas.hashicorp.com/search.
 config.vm.box = "box-cutter/ubuntu1404-desktop"
-config.vm.hostname = "Ref-Finder15"
+config.vm.hostname = "Ref-Finder"
 config.vm.provider "virtualbox" do |vb|
 # Display the VirtualBox GUI when booting the machine
 vb.gui = true
 # Customize the amount of memory on the VM:
 vb.memory = "2048"
 # Setting the virtual box name
-vb.name = "Ref-Finder15"
+vb.name = "Ref-Finder"
 end
 config.vm.provision "shell", inline: <<-SHELL
 
-#Install Java and set variables
+#Install Java 
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 sudo add-apt-repository ppa:webupd8team/java -y
-sudo apt-get update
+sudo apt-get update)
 sudo apt-get install oracle-java8-installer
 sudo apt-get install -y oracle-java8-set-default
 
@@ -30,7 +30,6 @@ sudo wget -nv "http://www.eclipse.org/downloads/download.php?file=/technology/ep
 echo "Installing eclipse"
 cd /home/vagrant && sudo tar xzf /home/vagrant/eclipse-rcp-mars-1-linux-gtk-x86_64.tar.gz
 sudo ln -s /home/vagrant/eclipse/eclipse /home/vagrant/Desktop/eclipse
-
 
 # Get Workspace
 echo "***** Downloading Workspace with sample project *****"
@@ -47,13 +46,12 @@ sudo mv /home/vagrant/Desktop/LSclipse_1.0.4 /home/vagrant/eclipse/plugins
 sudo chown -R vagrant "/home/vagrant/eclipse/plugins"
 sudo chmod -R a+rwx "/home/vagrant/eclipse/plugins"
 
-
 # Copy Installation file, License file, Readme, Youtube video link file and Acknowledgements file to desktop of the virtual machine
 wget -O "/home/vagrant/Desktop/Readme.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/Readme.txt
 wget -O "/home/vagrant/Desktop/Installation.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/Installation.txt
 wget -O "/home/vagrant/Desktop/License.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/License.txt
 wget -O "/home/vagrant/Desktop/Acknowledgement.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/Acknowledgement.txt
-wget -O "/home/vagrant/Desktop/How to use on this tool.desktop" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/Youtube%20Video.desktop
+wget -O "/home/vagrant/Desktop/Youtube Video.desktop" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/Youtube%20Video.desktop
 sudo chown -R vagrant "/home/vagrant/Desktop"
 sudo chmod -R a+rwx "/home/vagrant/Desktop"
 
@@ -66,19 +64,22 @@ sudo rm -f "/usr/share/applications/ubuntu-software-center.desktop"
 sudo rm -f "/usr/share/applications/unity-control-center.desktop"
 sudo apt-get -y remove update-notifier
 
-# Install Adobe Flash Player plugin to view youtube videos
+# Install Adobe Flash Player plugin for uninterrupted access to youtube video
 sudo apt-get install -y flashplugin-installer
 
-# Empty Trash bin for limiting the VM size
+# Limit VM size by cleaning up trash bin
 sudo rm -rf ~/.local/share/Trash/*
 
 #Start tool on startup
 sudo mkdir "/home/vagrant/.config/autostart"
 sudo wget -O "/home/vagrant/.config/autostart/eclipse.desktop" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/eclipse.desktop
 
-#Reboot
-sudo reboot
+# Disable screen lock
+sudo wget -O "/home/vagrant/screenlock.sh" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/screenlock.sh
+sudo wget -O "/home/vagrant/.config/autostart/screenlock.desktop" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/screenlock.desktop
 
+#Restart for changes to take effect
+sudo reboot
 
 SHELL
 end
