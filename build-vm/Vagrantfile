@@ -32,7 +32,7 @@ cd /home/vagrant && sudo tar xzf /home/vagrant/eclipse-rcp-mars-1-linux-gtk-x86_
 sudo ln -s /home/vagrant/eclipse/eclipse /home/vagrant/Desktop/eclipse
 
 # Get Workspace
-echo "***** Downloading Workspace with sample project *****"
+echo "Downloading Workspace"
 sudo wget "https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/workspace.tar.gz" -O /home/vagrant/workspace.tar.gz
 sudo tar -xvf /home/vagrant/workspace.tar.gz -C /home/vagrant/
 sudo rm /home/vagrant/workspace.tar.gz
