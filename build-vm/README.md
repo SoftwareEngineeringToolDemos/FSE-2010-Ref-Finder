@@ -28,8 +28,8 @@ This folder contains the files needed to build a virtual machine for Ref-Finder 
 * password: *vagrant*
 
 ### Acknowledgments
-1. Vagrant box used: boxcutter/ubuntu1504-desktop from [here](https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1504-desktop)
-2.Commands for java installation from [here](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
-3.Commands for eclipse installation from [here](http://blog.versioneye.com/2015/05/05/setting-up-a-dev-environment-with-vagrant/)
-4.Commands for Vagrantfile from [here](https://help.ubuntu.com/) 
-5.https://docs.vagrantup.com/v2/provisioning/shell.html
+* Vagrant box used: boxcutter/ubuntu1504-desktop from [here](https://atlas.hashicorp.com/boxcutter/boxes/ubuntu1504-desktop)
+* Commands for java installation from [here](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
+* Commands for eclipse installation from [here](http://blog.versioneye.com/2015/05/05/setting-up-a-dev-environment-with-vagrant/)
+* Commands for Vagrantfile from [here](https://help.ubuntu.com/) 
+* https://docs.vagrantup.com/v2/provisioning/shell.html
