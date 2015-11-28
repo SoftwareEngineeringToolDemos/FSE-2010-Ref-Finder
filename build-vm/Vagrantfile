@@ -35,7 +35,7 @@ sudo ln -s /home/vagrant/eclipse/eclipse /home/vagrant/Desktop/eclipse
 
 
 # Get Workspace
-echo "***** Downloading Workspace with sample project *****"
+echo "Downloading Workspace"
 sudo wget "https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/workspace.tar.gz" -O /home/vagrant/workspace.tar.gz
 sudo tar -xvf /home/vagrant/workspace.tar.gz -C /home/vagrant/
 sudo rm /home/vagrant/workspace.tar.gz
@@ -43,7 +43,6 @@ sudo chown -R vagrant "/home/vagrant/workspace"
 sudo chmod -R a+rwx "/home/vagrant/workspace"
 
 #Get Ref-Finder
-
 wget -O "/home/vagrant/Desktop/LSclipse_1.0.4.tar" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/LSclipse_1.0.4.tar.gz
 sudo tar -xvf /home/vagrant/Desktop/LSclipse_1.0.4.tar -C /home/vagrant/Desktop/
 sudo mv /home/vagrant/Desktop/LSclipse_1.0.4 /home/vagrant/eclipse/plugins
