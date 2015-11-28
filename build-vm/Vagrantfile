@@ -4,14 +4,14 @@ Vagrant.configure(2) do |config|
 # Every Vagrant development environment requires a box. You can search for
 # boxes at https://atlas.hashicorp.com/search.
 config.vm.box = "box-cutter/ubuntu1404-desktop"
-config.vm.hostname = "Ref-Finder"
+config.vm.hostname = "Ref-Finder10"
 config.vm.provider "virtualbox" do |vb|
 # Display the VirtualBox GUI when booting the machine
 vb.gui = true
 # Customize the amount of memory on the VM:
 vb.memory = "2048"
 # Setting the virtual box name
-vb.name = "Ref-Finder"
+vb.name = "Ref-Finder10"
 end
 config.vm.provision "shell", inline: <<-SHELL
 # Java installation source : http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html
@@ -34,24 +34,34 @@ cd /home/vagrant && sudo tar xzf /home/vagrant/eclipse-rcp-mars-1-linux-gtk-x86_
 sudo ln -s /home/vagrant/eclipse/eclipse /home/vagrant/Desktop/eclipse
 
 
-#Download Ref-Finder
-wget -O "/home/vagrant/Desktop/LSclipse_1.0.4.jar" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/LSclipse_1.0.4.jar
+# Get Workspace
+echo "***** Downloading Workspace with sample project *****"
+sudo wget "https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/workspace.tar.gz" -O /home/vagrant/workspace.tar.gz
+sudo tar -xvf /home/vagrant/workspace.tar.gz -C /home/vagrant/
+sudo rm /home/vagrant/workspace.tar.gz
+sudo chown -R vagrant "/home/vagrant/workspace"
+sudo chmod -R a+rwx "/home/vagrant/workspace"
 
-#Extract Ref-Finder jar file
+#Get Ref-Finder
 
-# Copy extracted file to the Eclipse Plugins folder
-sudo cp -a "/home/vagrant/Desktop/LSclipse_1.0.4.jar" /home/vagrant/eclipse/plugins/
+wget -O "/home/vagrant/Desktop/LSclipse_1.0.4.tar" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/LSclipse_1.0.4.tar.gz
+sudo tar -xvf /home/vagrant/Desktop/LSclipse_1.0.4.tar -C /home/vagrant/Desktop/
+sudo mv /home/vagrant/Desktop/LSclipse_1.0.4 /home/vagrant/eclipse/plugins
+sudo chown -R vagrant "/home/vagrant/eclipse/plugins"
+sudo chmod -R a+rwx "/home/vagrant/eclipse/plugins"
 
 
 # Copy Installation file, License file, Readme, Youtube video link file and Acknowledgements file to desktop of the virtual machine
-wget -O "/home/vagrant/Desktop/Readme.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/Readme.txt
-wget -O "/home/vagrant/Desktop/Installation.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/Installation.txt
-wget -O "/home/vagrant/Desktop/License.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/License.txt
-wget -O "/home/vagrant/Desktop/Acknowledgement.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/Acknowledgement.txt
-wget -O "/home/vagrant/Desktop/How to use on this tool.desktop" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/blob/master/build-vm/vm-contents/Youtube%20Video.desktop
+wget -O "/home/vagrant/Desktop/Readme.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/Readme.txt
+wget -O "/home/vagrant/Desktop/Installation.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/Installation.txt
+wget -O "/home/vagrant/Desktop/License.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/License.txt
+wget -O "/home/vagrant/Desktop/Acknowledgement.txt" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/Acknowledgement.txt
+wget -O "/home/vagrant/Desktop/How to use on this tool.desktop" https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/raw/master/build-vm/vm-contents/Youtube%20Video.desktop
 sudo chown -R vagrant "/home/vagrant/Desktop"
 sudo chmod -R a+rwx "/home/vagrant/Desktop"
+
+cd /home/vagrant/eclipse
+sudo ./eclipse -clean -data /home/vagrant/workspace
+
 SHELL
 end
-
-#cp LSclipse_1.0.4.jar /c/Users/user/Desktop/FSE-2010-Ref-Finder/build-vm/vm-contents/LSclipse_1.0.4.jar
