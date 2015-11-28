@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/home/vagrant/eclipse/eclipse -clean -data /home/vagrant/workspace
+Exec=/home/vagrant/eclipse/eclipse -data /home/vagrant/workspace
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
