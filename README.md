@@ -69,8 +69,10 @@ In this repository, for Ref-Finder you will find:
 
 :white_check_mark: [Executable tool](https://sites.google.com/site/reffindertool/) (available)
 
-:white_check_mark: [Virtual Machine containing tool](https://drive.google.com/drive/folders/0B3GbPov8x279UFNIOFJGN1hlUEk)(available)
+:white_check_mark: [Virtual Machine containing tool](https://drive.google.com/a/ncsu.edu/folderview?id=0B3GbPov8x279UFNIOFJGN1hlUEk&usp=sharing&tid=0B3GbPov8x279UWFHSDNrRWZkems)(available)
 
-The tool can be downloaded from  [The Official Project Page](https://sites.google.com/site/reffindertool/)
+To know more about the tool please visit  [The Official Project Page](https://sites.google.com/site/reffindertool/)
+The tool can be downloaded from  [Tool Download Page](https://sites.google.com/site/reffindertool/)
 
-This repository was constructed by [Eesha Mulky] (https://github.com/egmulky) under the supervision of [Emerson Murphy-Hill] (https://github.com/CaptainEmerson). Thanks to Dr. Miryung Kim for help in establishing this repository.
+
+This repository was constructed by [Eesha Mulky] (https://github.com/egmulky) under the supervision of [Emerson Murphy-Hill] (https://github.com/CaptainEmerson). Thanks to [Dr. Miryung Kim](http://web.cs.ucla.edu/~miryung/) for help in establishing this repository.
