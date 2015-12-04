@@ -71,7 +71,7 @@ In this repository, for Ref-Finder you will find:
 
 :white_check_mark: [Virtual Machine containing tool](https://drive.google.com/a/ncsu.edu/folderview?id=0B3GbPov8x279UFNIOFJGN1hlUEk&usp=sharing&tid=0B3GbPov8x279UWFHSDNrRWZkems)(available)
 
-To know more about the tool please visit  [The Official Project Page](https://sites.google.com/site/reffindertool/)
+To know more about the tool, Please visit  [The Official Project Page](https://sites.google.com/site/reffindertool/)
 
 The tool can be downloaded from  [Tool Download Page](https://sites.google.com/site/reffindertool/)
 
