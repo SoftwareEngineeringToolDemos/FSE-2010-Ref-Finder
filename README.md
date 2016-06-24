@@ -61,19 +61,14 @@ Software engineers often inspect program differences when reviewing others’ co
 
 This repository contains information related to the tool Ref-Finder presented in Foundations of Software Engineering (FSE), 2010. The tool was originally presented in the paper ["Ref-Finder: A Refactoring Reconstruction Tool based on Logic Query Templates"](http://web.cs.ucla.edu/~miryung/Publications/fse10-reffindertool.pdf) by Miryung Kim, Matthew Gee, Alex Loh and  Napol Rachatasumrit.
 
-This repository _is not_ the original repository for this tool.
+This repository _is not_ the original repository for this tool. 
+* To find out more about the tool, Please visit [The Official Project Page](https://sites.google.com/site/reffindertool/)
+* The tool can be downloaded from  [Tool Download Page](https://sites.google.com/site/reffindertool/)
 
 In this repository, for Ref-Finder you will find:
 
-:white_check_mark: [Source code](https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/tree/master/code) (available)
-
-:white_check_mark: [Executable tool](https://sites.google.com/site/reffindertool/) (available)
-
-:white_check_mark: [Virtual Machine containing tool](https://drive.google.com/a/ncsu.edu/folderview?id=0B3GbPov8x279UFNIOFJGN1hlUEk&usp=sharing&tid=0B3GbPov8x279UWFHSDNrRWZkems)(available)
-
-To know more about the tool, Please visit  [The Official Project Page](https://sites.google.com/site/reffindertool/)
-
-The tool can be downloaded from  [Tool Download Page](https://sites.google.com/site/reffindertool/)
-
+* :white_check_mark: [Source code](https://github.com/SoftwareEngineeringToolDemos/FSE-2010-Ref-Finder/tree/master/code) (available)
+* :x: Executable tool (not available)
+* :white_check_mark: [Virtual machine containing tool](http://go.ncsu.edu/SE-tool-VMs)
 
 This repository was constructed by [Eesha Mulky] (https://github.com/egmulky) under the supervision of [Emerson Murphy-Hill] (https://github.com/CaptainEmerson). Thanks to [Dr. Miryung Kim](http://web.cs.ucla.edu/~miryung/) for help in establishing this repository.
